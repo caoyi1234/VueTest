@@ -4,17 +4,18 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './store'
+import './mock'
+import axios from 'axios'
 import echart from 'echarts'
 Vue.prototype.$echarts = echart
-// 引入mockjs
-require('./mock/index')
+Vue.prototype.$axios = axios
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
-  store,
+	store,
   components: { App },
   template: '<App/>'
 })

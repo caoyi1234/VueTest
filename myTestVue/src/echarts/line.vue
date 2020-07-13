@@ -15,11 +15,19 @@ export default {
       array: []
     };
   },
-
+	created(){
+		this.getData();
+		console.log(this.$store);
+	},
   mounted() {
     this.init();
   },
   methods: {
+		getData(){
+			this.$axios.get('/user/login').then(res=>{
+				console.log(res);
+			})
+		},
     init() {
       // /*分成两个集合*/
       this.data = [];

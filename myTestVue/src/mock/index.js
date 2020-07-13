@@ -6,18 +6,18 @@ const Random = Mock.Random
 
 // mock一组数据
 const simulateData = function () {
-  let data = []
+  let datas = []
   for (let i = 0; i < 8; i++) {
     let data = {
       name: Random.cname(),
       date: Random.date(),
       city: Random.city()
     }
-    data.push(data)
+    datas.push(data)
   }
 
   return {
-    data: data
+    data: datas
   }
 }
 
